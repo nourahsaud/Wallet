@@ -1,0 +1,1 @@
+web: gunicorn WalletProject.wsgi --log-file -

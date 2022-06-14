@@ -17,7 +17,7 @@ class Income(models.Model):
 
     Amount = models.DecimalField(max_digits=11, decimal_places=2)
     Source = models.CharField(choices=SOURCE_OPTIONS, max_length=100)
-    Descriptions = models.TextField(blank=True)
+    Description = models.TextField(blank=True)
     Date = models.DateField(auto_now_add=True, blank=True)
     Recurring = models.BooleanField(default=False)
     #user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -40,18 +40,16 @@ class Expense(models.Model):
 
     Amount = models.DecimalField(max_digits=11, decimal_places=2)
     Category = models.CharField(choices=CATEGORY_OPTIONS, max_length=100)
-    Descriptions = models.TextField(blank=True)
+    Description = models.TextField(blank=True)
     Date = models.DateField(auto_now_add=True, blank=True)
     Recurring = models.BooleanField(default=False)
     #user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
-
-
 class Plan(models.Model):
     Name = models.CharField(max_length=100)
     Amount = models.DecimalField(max_digits=11, decimal_places=2)
-    Descriptions = models.TextField(blank=True)
+    Description = models.TextField(blank=True)
     Start_date = models.DateField(auto_now_add=True, blank=True)
     Estemated_date = models.DateField()
     #user = models.ForeignKey(User, on_delete=models.CASCADE)

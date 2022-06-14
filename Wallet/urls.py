@@ -3,7 +3,7 @@ from django.urls import path, include
 from pkg_resources import DefaultProvider
 from . import views
 
-
+app_name = 'wallet'
 urlpatterns = [
     # Exoenses Endpoints
     path('expense/', views.expenses_view, name='list expenses'),

@@ -3,16 +3,16 @@ from .models import Expense, Income, Plan
 # Register your models here.
 
 class ExpenseAdmin(admin.ModelAdmin):
-    list_display = ('amount', 'description', 'category', 'date')
-    list_filter = ('amount', 'category', 'date')
-    search_fields = ('category',)
+    list_display = ('Amount', 'Category', 'Date')
+    list_filter = ('Amount', 'Category', 'Date')
+    search_fields = ('Category',)
     empty_value_display = '-empty-'
 
     list_per_page = 5
 
 class IncomeAdmin(admin.ModelAdmin):
-    list_display = ('amount', 'description', 'Source', 'date')
-    list_filter = ('amount', 'Source', 'date')
+    list_display = ('Amount', 'Source', 'Date')
+    list_filter = ('Amount', 'Source', 'Date')
     search_fields = ('Source',)
     empty_value_display = '-empty-'
 
@@ -20,4 +20,3 @@ class IncomeAdmin(admin.ModelAdmin):
 
 admin.site.register(Expense, ExpenseAdmin)
 admin.site.register(Income, IncomeAdmin)
-admin.site.register(Plan)
