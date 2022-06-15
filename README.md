@@ -30,6 +30,6 @@ Helping people to be in a staible and healthy financial state.
 - View a (chart view) of the expenses and income.
 - Contact with a consultant.
 
-### Consultant
+### Consultant (round robin)
 
-- Create, Read, Update, Delete schedule.
+- Provide the user with a budget plan 
