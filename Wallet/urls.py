@@ -19,4 +19,21 @@ urlpatterns = [
     path('income/update/<int:pk>',views.income_view_pk, name='update income'),
     path('income/delete/<int:pk>',views.income_view_pk, name='delete income'),
 
+    # Summary Endpoints
+    # Expenses
+    path('expense/summary', views.expense_summary, name='expenses summary'),
+    # Income
+    path('income/summary', views.income_summary, name='income summary'),
+
+    # Plan Endpoints
+    path('plan/', views.plan_view, name='list plans'),
+    path('plan/add', views.plan_view, name='add plan'),
+    path('plan/<int:pk>',views.plan_view_pk, name='view plan'),
+    path('plan/update/<int:pk>',views.plan_view_pk, name='update plan'),
+    path('plan/delete/<int:pk>',views.plan_view_pk, name='delete plan'),
+
+    # Consult Endpoints
+    path('consult/', views.plan_view, name='view consult'),
+    path('consult/add', views.plan_view, name='add consult'),
+
 ]

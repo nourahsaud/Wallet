@@ -15,11 +15,11 @@ class Income(models.Model):
         ('OTHERS', 'OTHERS')
     ]
 
-    Amount = models.DecimalField(max_digits=11, decimal_places=2)
-    Source = models.CharField(choices=SOURCE_OPTIONS, max_length=100)
-    Description = models.TextField(blank=True)
-    Date = models.DateField(auto_now_add=True, blank=True)
-    Recurring = models.BooleanField(default=False)
+    amount = models.DecimalField(max_digits=11, decimal_places=2)
+    source = models.CharField(choices=SOURCE_OPTIONS, max_length=100)
+    description = models.TextField()
+    date = models.DateField(auto_now_add=True, blank=True)
+    recurring = models.BooleanField(default=False)
     #user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
@@ -38,27 +38,25 @@ class Expense(models.Model):
         ('OTHERS', 'OTHERS')
     ]
 
-    Amount = models.DecimalField(max_digits=11, decimal_places=2)
-    Category = models.CharField(choices=CATEGORY_OPTIONS, max_length=100)
-    Description = models.TextField(blank=True)
-    Date = models.DateField(auto_now_add=True, blank=True)
-    Recurring = models.BooleanField(default=False)
+    amount = models.DecimalField(max_digits=11, decimal_places=2)
+    category = models.CharField(choices=CATEGORY_OPTIONS, max_length=100)
+    description = models.TextField()
+    date = models.DateField(auto_now_add=True, blank=True)
+    recurring = models.BooleanField(default=False)
     #user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 class Plan(models.Model):
-    Name = models.CharField(max_length=100)
-    Amount = models.DecimalField(max_digits=11, decimal_places=2)
-    Description = models.TextField(blank=True)
-    Start_date = models.DateField(auto_now_add=True, blank=True)
-    Estemated_date = models.DateField()
+    name = models.CharField(max_length=100)
+    amount = models.DecimalField(max_digits=11, decimal_places=2)
+    description = models.TextField(blank=True)
+    start_date = models.DateField(auto_now_add=True, blank=True)
+    estemated_date = models.DateField()
     #user = models.ForeignKey(User, on_delete=models.CASCADE)
     # Calculate the time in months 
 
 
-#class Consult(models.Model):
-#    Consultant_name = models.CharField()
-    # it should be a foreign key
-#    Date = models.DateField()
+class Consult(models.Model):
+    consult = models.BooleanField()
 
     
